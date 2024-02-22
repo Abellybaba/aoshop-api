@@ -19,6 +19,11 @@ mongoose
     console.log(err);
   });
 
+app.get("/", (req, res) => {
+  res.send("Backend server is running");
+  console.log("Backend server is running");
+});
+
 app.get("/api/test", (req, res) => {
   res.send("Backend server is running");
   console.log("Backend server is running");
