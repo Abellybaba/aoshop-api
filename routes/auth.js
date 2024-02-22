@@ -44,12 +44,13 @@ router.post("/login", async (req, res) => {
 
     originalPassword != inputPassword && res.status(401).json("Wrong Password");
 
-    const accessToken = jwt.sign( //implementing jwt token after user sign in
+    const accessToken = jwt.sign(
+      //implementing jwt token after user sign in
       {
-        id: user._id, 
+        id: user._id,
         isAdmin: user.isAdmin,
       },
-      process.env.JWT_SEC,  //passord in .env
+      process.env.JWT_SEC, //passord in .env
       {
         expiresIn: "3d", //expires in 3days
       }

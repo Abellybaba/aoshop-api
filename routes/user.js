@@ -53,7 +53,7 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
 
 // //GET ALL USER
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
-  const query = req.query.new;  //query to return users by sorting
+  const query = req.query.new; //query to return users by sorting
   try {
     const users = query
       ? await User.find().sort({ _id: -1 }).limit(5)
@@ -85,7 +85,7 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
         },
       },
     ]);
-    res.status(200).json(data)
+    res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }

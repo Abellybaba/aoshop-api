@@ -19,11 +19,10 @@ mongoose
     console.log(err);
   });
 
-  // app.get('/api/test', (req, res) => {
-  //   res.send("Backend server is running")
-  //   console.log("Backend server is running")
-  // })
-
+app.get("/api/test", (req, res) => {
+  res.send("Backend server is running");
+  console.log("Backend server is running");
+});
 
 app.use(cors());
 app.use(express.json()); //gives the app ability to use json objects
@@ -34,6 +33,6 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("Backend server is running!");
 });

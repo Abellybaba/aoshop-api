@@ -1,7 +1,7 @@
-content http://localhost:5000/api/auth/register
+content http://localhost:8000/api/auth/register
 ###
 
-POST http://localhost:5000/api/auth/register HTTP/1.1
+POST http://localhost:8000/api/auth/register HTTP/1.1
 content-type: application/json
 
 {
@@ -11,7 +11,7 @@ content-type: application/json
 }
 ###
 
-POST http://localhost:5000/api/auth/login HTTP/1.1
+POST http://localhost:8000/api/auth/login HTTP/1.1
 content-type: application/json
 
 {
@@ -21,7 +21,7 @@ content-type: application/json
 ###
 
 
-PUT http://localhost:5000/api/users/63506fb2a8ee952f7b2026ad HTTP/1.1
+PUT http://localhost:8000/api/users/63506fb2a8ee952f7b2026ad HTTP/1.1
 content-type: application/json
 Authorization: token Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzM1NTczMmQ3MzI2MzhmNmY2ZDUwOSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NjIyMjA0MywiZXhwIjoxNjY2NDgxMjQzfQ.gXLDOxIWEfG66hGYBc3ftsd7tdy8uuLeNOPHyxfhavw
 
